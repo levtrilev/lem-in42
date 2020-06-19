@@ -19,6 +19,7 @@ void	read_input(t_d *d, int i, int n)
 	str = NULL;
 	if (!(str = (char *)malloc(sizeof(char) * LEN_STR)))
 		set_error(d, "ERROR can't allocate memory");
+	ft_bzero(str, sizeof(char) * LEN_STR);
 	while ((n = read(0, &(str[i]), LEN_STR)) && (i + 10000 < LEN_STR))
 	{
 		i += n;

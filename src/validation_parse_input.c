@@ -25,6 +25,5 @@ int		parse_input(t_d *d)
 		set_error(d, "ERROR in links");
 	if (get_link(d, d->start, d->end))
 		print_all_in_one_step(d);
-	//test_empty_ways(d, 0, 1, 0);
 	return (1);
 }

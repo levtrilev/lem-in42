@@ -64,9 +64,9 @@ typedef struct	s_d
 	int			*y_rooms;
 	char		*input_str;
 	int			c_start;
-	int 		c_end;
-	int 		c_steps;
-	int 		c_pack;
+	int			c_end;
+	int			c_steps;
+	int			c_pack;
 }				t_d;
 
 char			*ft_strdup(const char *s1);

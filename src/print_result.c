@@ -99,21 +99,9 @@ void	run_way(t_d *d, int i, int way, t_l *tmp)
 	d->n[1] = 0;
 }
 
-/*
-** d->n[0] number of ways
-** d->n[1]
-** d->n[2] current ant started
-** d->n[3] if == 0 then all ants in home else == 1
-** tmp->weight in del == 0 === number steps in way
-** tmp->allow in del == 0 === number ants in way
-** tmp->del = number step in this room
-** if tmp->del > 0
-** tmp->allow = number ant in this room
-*/
-
 void	print_result(t_d *d, int i)
 {
-	ft_bzero(d->n, sizeof(int) * 12);
+	ft_bzero(d->n, sizeof(int) * 1000);
 	while ((d->ways)[i])
 		i++;
 	(d->n)[0] = i;
@@ -124,7 +112,6 @@ void	print_result(t_d *d, int i)
 		write(1, "\n", 1);
 	fill_numbers_ants_to_ways(d, 0, d->num_ants, (d->n)[0]);
 	d->n[3] = 1;
-	//(d->n)[100000] = 0;
 	while (d->n[3])
 	{
 		d->n[3] = 0;

@@ -41,6 +41,7 @@ void	delete_way(t_d *d, t_l *tmp, t_l *next)
 /*
 ** (d->n)[6] - current way in d->ways
 */
+
 void	write_way_in_packs_ways(t_d *d, int end)
 {
 	while (end != d->start)
@@ -49,9 +50,7 @@ void	write_way_in_packs_ways(t_d *d, int end)
 		end = d->room_from[end];
 	}
 	create_way_link(d, end);
-	if (is_minus_ways(d, NULL, NULL, NULL)
-	//|| is_use_busy_room(d, NULL, NULL, 0)
-	)
+	if (is_minus_ways(d, NULL, NULL, NULL))
 	{
 		(d->n)[9] = 1;
 		delete_way(d, NULL, NULL);
